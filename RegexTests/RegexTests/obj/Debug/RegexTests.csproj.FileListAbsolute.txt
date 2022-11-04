@@ -1,0 +1,7 @@
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\RegexTests\RegexTests\bin\Debug\RegexTests.exe.config
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\RegexTests\RegexTests\bin\Debug\RegexTests.exe
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\RegexTests\RegexTests\bin\Debug\RegexTests.pdb
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\RegexTests\RegexTests\obj\Debug\RegexTests.csprojAssemblyReference.cache
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\RegexTests\RegexTests\obj\Debug\RegexTests.csproj.CoreCompileInputs.cache
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\RegexTests\RegexTests\obj\Debug\RegexTests.exe
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\RegexTests\RegexTests\obj\Debug\RegexTests.pdb

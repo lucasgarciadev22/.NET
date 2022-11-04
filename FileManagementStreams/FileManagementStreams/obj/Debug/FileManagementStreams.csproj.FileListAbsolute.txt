@@ -1,0 +1,6 @@
+C:\Users\lucas10\source\repos\FileManagementStreams\FileManagementStreams\bin\Debug\FileManagementStreams.exe.config
+C:\Users\lucas10\source\repos\FileManagementStreams\FileManagementStreams\bin\Debug\FileManagementStreams.exe
+C:\Users\lucas10\source\repos\FileManagementStreams\FileManagementStreams\bin\Debug\FileManagementStreams.pdb
+C:\Users\lucas10\source\repos\FileManagementStreams\FileManagementStreams\obj\Debug\FileManagementStreams.csproj.CoreCompileInputs.cache
+C:\Users\lucas10\source\repos\FileManagementStreams\FileManagementStreams\obj\Debug\FileManagementStreams.exe
+C:\Users\lucas10\source\repos\FileManagementStreams\FileManagementStreams\obj\Debug\FileManagementStreams.pdb

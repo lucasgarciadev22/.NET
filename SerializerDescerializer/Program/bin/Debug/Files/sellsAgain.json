@@ -1,0 +1,12 @@
+[
+  {
+    "Id": 1,
+    "Product": "Office Supply",
+    "Price": 29.99
+  },
+  {
+    "Id": 2,
+    "Product": "Computer Supply",
+    "Price": 189.90
+  }
+]

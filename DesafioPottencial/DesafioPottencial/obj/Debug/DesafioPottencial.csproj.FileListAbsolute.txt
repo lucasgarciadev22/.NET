@@ -1,0 +1,6 @@
+C:\Users\lucas10\source\repos\DesafioPottencial\DesafioPottencial\bin\Debug\DesafioPottencial.exe.config
+C:\Users\lucas10\source\repos\DesafioPottencial\DesafioPottencial\bin\Debug\DesafioPottencial.exe
+C:\Users\lucas10\source\repos\DesafioPottencial\DesafioPottencial\bin\Debug\DesafioPottencial.pdb
+C:\Users\lucas10\source\repos\DesafioPottencial\DesafioPottencial\obj\Debug\DesafioPottencial.csproj.CoreCompileInputs.cache
+C:\Users\lucas10\source\repos\DesafioPottencial\DesafioPottencial\obj\Debug\DesafioPottencial.exe
+C:\Users\lucas10\source\repos\DesafioPottencial\DesafioPottencial\obj\Debug\DesafioPottencial.pdb

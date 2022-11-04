@@ -1,0 +1,10 @@
+C:\Users\lucas10\source\repos\SerializerDescerializer\Program\bin\Debug\Program.exe.config
+C:\Users\lucas10\source\repos\SerializerDescerializer\Program\bin\Debug\Program.exe
+C:\Users\lucas10\source\repos\SerializerDescerializer\Program\bin\Debug\Program.pdb
+C:\Users\lucas10\source\repos\SerializerDescerializer\Program\bin\Debug\Newtonsoft.Json.dll
+C:\Users\lucas10\source\repos\SerializerDescerializer\Program\bin\Debug\Newtonsoft.Json.xml
+C:\Users\lucas10\source\repos\SerializerDescerializer\Program\obj\Debug\Program.csprojAssemblyReference.cache
+C:\Users\lucas10\source\repos\SerializerDescerializer\Program\obj\Debug\Program.csproj.CoreCompileInputs.cache
+C:\Users\lucas10\source\repos\SerializerDescerializer\Program\obj\Debug\Program.csproj.CopyComplete
+C:\Users\lucas10\source\repos\SerializerDescerializer\Program\obj\Debug\Program.exe
+C:\Users\lucas10\source\repos\SerializerDescerializer\Program\obj\Debug\Program.pdb

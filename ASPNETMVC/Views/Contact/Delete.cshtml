@@ -1,0 +1,37 @@
+@model ASPNETMVC.Models.Contact
+
+@{
+  ViewData["Title"]="Remove Contacts";
+}
+
+<h1 style="color:rgb(255, 67, 38) ;">Are you sure you want to delete @Html.DisplayFor(x=>x.Name)?</h1>
+
+<hr/>
+
+<div>
+  <dl class="row">
+    <dt class="col-sm-2">
+      @Html.DisplayNameFor(x=>x.Name)
+    </dt>
+    <dt class="col-sm-10">
+      @Html.DisplayFor(x=>x.Name)
+    </dt>
+     <dt class="col-sm-2">
+      @Html.DisplayNameFor(x=>x.Phone)
+    </dt>
+    <dt class="col-sm-10">
+      @Html.DisplayFor(x=>x.Phone)
+    </dt>
+     <dt class="col-sm-2">
+      @Html.DisplayNameFor(x=>x.Active)
+    </dt>
+    <dt class="col-sm-10">
+      @Html.DisplayFor(x=>x.Active)
+    </dt>
+  </dl>
+</div>
+<form asp-action="Delete">
+  <input type="submit" value="Delete" class="btn btn-danger"/>
+</form>
+<br>
+<a asp-action="Index">Back</a>

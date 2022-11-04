@@ -1,0 +1,6 @@
+C:\Users\lucas10\source\repos\NUnitTests\NUnitTest\bin\Debug\NUnitTest.exe.config
+C:\Users\lucas10\source\repos\NUnitTests\NUnitTest\bin\Debug\NUnitTest.exe
+C:\Users\lucas10\source\repos\NUnitTests\NUnitTest\bin\Debug\NUnitTest.pdb
+C:\Users\lucas10\source\repos\NUnitTests\NUnitTest\obj\Debug\NUnitTest.csproj.CoreCompileInputs.cache
+C:\Users\lucas10\source\repos\NUnitTests\NUnitTest\obj\Debug\NUnitTest.exe
+C:\Users\lucas10\source\repos\NUnitTests\NUnitTest\obj\Debug\NUnitTest.pdb

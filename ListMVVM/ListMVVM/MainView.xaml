@@ -1,0 +1,204 @@
+﻿<mah:MetroWindow x:Class="ListMVVM.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:avalonDock="https://github.com/Dirkster99/AvalonDock"
+        xmlns:local="clr-namespace:ListMVVM"
+        xmlns:viewModel="clr-namespace:ListMVVM.ViewModel;assembly=ListMVVM.ViewModel"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:userControls="clr-namespace:ListMVVM.UserControls"
+        mc:Ignorable="d"
+        Title="List MVVM + MahAps + AvalonDock" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    
+    <Window.Resources>
+        
+        <DataTemplate DataType="{x:Type viewModel:CRUDViewModel}">
+            <userControls:CRUDView/>
+        </DataTemplate>
+        
+    </Window.Resources>
+    
+    <mah:MetroWindow.LeftWindowCommands>
+        <mah:WindowCommands>
+            <Button>
+                <Button.ToolTip>
+                    <ToolTip >
+                        <ToolTip.Template>
+                            <ControlTemplate>
+                                <Grid>
+                                    <Border Background="DarkSlateBlue"
+                                                                    BorderBrush="DarkSlateBlue"
+                                                                    Opacity="0.9"
+                                                                    SnapsToDevicePixels="True"
+                                                                    CornerRadius="12">
+                                    </Border>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" 
+                                                                       Margin="8"
+                                                                       Foreground="WhiteSmoke"
+                                                                       FontSize="12"
+                                                                       Text="Visite meu GitHub"
+                                                                       TextOptions.TextFormattingMode="Display"
+                                                                       TextOptions.TextRenderingMode="ClearType"/>
+                                        <iconPacks:PackIconMaterial Grid.Column="1" 
+                                                                                            Kind="Web" Margin="5" VerticalAlignment="Center" Foreground="White"/>
+                                    </Grid>
+                                </Grid>
+                            </ControlTemplate>
+                        </ToolTip.Template>
+                    </ToolTip>
+                </Button.ToolTip>
+                <iconPacks:PackIconModern Width="22"
+                                  Height="22"
+                                  Kind="SocialGithubOctocat" />
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName ="Click">
+                        <i:InvokeCommandAction Command="{Binding GiHub_ClickCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
+        </mah:WindowCommands>
+    </mah:MetroWindow.LeftWindowCommands>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <DockingManager GridSplitterWidth="0" GridSplitterHeight="0">
+            <DockingManager.Theme>
+                <Vs2013LightTheme />
+            </DockingManager.Theme>
+            <LayoutRoot>
+                <LayoutPanel >
+                    <LayoutDocumentPaneGroup CanRepositionItems="True" AllowDuplicateContent="True">
+                        <LayoutDocumentPane x:Name="MainDockPane" CanRepositionItems="True" ShowHeader="True">
+                            <LayoutDocument Title="Menu Inicial" IconSource="/Src/Img/Anchor.png">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50"/>
+                                        <RowDefinition/>
+                                        <RowDefinition Height="25"/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                        <Button Content="CRUD" HorizontalAlignment="Left" Padding="8" Margin="8" VerticalAlignment="Top" Background="DarkSlateBlue" Foreground="White"
+                                            Focusable="False">
+                                            <Button.ToolTip>
+                                                <ToolTip >
+                                                    <ToolTip.Template>
+                                                        <ControlTemplate>
+                                                            <Grid>
+
+                                                                <Border Background="DarkSlateBlue"
+                                                                    BorderBrush="DarkSlateBlue"
+                                                                    Opacity="0.9"
+                                                                    SnapsToDevicePixels="True"
+                                                                    CornerRadius="12">
+
+                                                                </Border>
+                                                                <Grid>
+                                                                    <Grid.ColumnDefinitions>
+                                                                        <ColumnDefinition/>
+                                                                        <ColumnDefinition/>
+                                                                    </Grid.ColumnDefinitions>
+                                                                    <TextBlock Grid.Column="0" 
+                                                                       Margin="8"
+                                                                       Foreground="WhiteSmoke"
+                                                                       FontSize="12"
+                                                                       Text="Clique para chamar a CRUDView"
+                                                                       TextOptions.TextFormattingMode="Display"
+                                                                       TextOptions.TextRenderingMode="ClearType"/>
+                                                                    <iconPacks:PackIconMaterial Grid.Column="1" 
+                                                                                            Kind="FormSelect" Margin="5" VerticalAlignment="Center" Foreground="White"/>
+                                                                </Grid>
+
+                                                            </Grid>
+                                                        </ControlTemplate>
+                                                    </ToolTip.Template>
+                                                </ToolTip>
+                                            </Button.ToolTip>
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName ="Click">
+                                                    <i:InvokeCommandAction Command="{Binding CRUD_ClickCommand}"/>
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </Button>
+                                        <Button Content="Info" HorizontalAlignment="Left" Padding="8" Margin="8" VerticalAlignment="Top" Background="DarkSlateBlue" Foreground="White"
+                                            Focusable="False">
+                                            <Button.ToolTip>
+                                                <ToolTip >
+                                                    <ToolTip.Template>
+                                                        <ControlTemplate>
+                                                            <Grid>
+
+                                                                <Border Background="DarkSlateBlue"
+                                                                    BorderBrush="DarkSlateBlue"
+                                                                    Opacity="0.9"
+                                                                    SnapsToDevicePixels="True"
+                                                                    CornerRadius="12">
+
+                                                                </Border>
+                                                                <Grid>
+                                                                    <Grid.ColumnDefinitions>
+                                                                        <ColumnDefinition/>
+                                                                        <ColumnDefinition/>
+                                                                    </Grid.ColumnDefinitions>
+                                                                    <TextBlock Grid.Column="0" 
+                                                                       Margin="8"
+                                                                       Foreground="WhiteSmoke"
+                                                                       FontSize="12"
+                                                                       Text="Clique para chamar a InfoView"
+                                                                       TextOptions.TextFormattingMode="Display"
+                                                                       TextOptions.TextRenderingMode="ClearType"/>
+                                                                    <iconPacks:PackIconMaterial Grid.Column="1" 
+                                                                                            Kind="CheckboxMultipleBlank" Margin="5" VerticalAlignment="Center" Foreground="White"/>
+                                                                </Grid>
+
+                                                            </Grid>
+                                                        </ControlTemplate>
+                                                    </ToolTip.Template>
+                                                </ToolTip>
+                                            </Button.ToolTip>
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="Click">
+                                                    <i:InvokeCommandAction Command="{Binding Info_ClickCommand}"/>
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </Button>
+                                        
+                                    </StackPanel>
+                                    <DockPanel Grid.Row="1">
+                                        <ContentControl Content="{Binding WindowBody}"/>
+                                    </DockPanel>
+                                </Grid>
+                            </LayoutDocument>
+                        </LayoutDocumentPane>
+                    </LayoutDocumentPaneGroup>
+                    <LayoutAnchorablePaneGroup>
+                        <LayoutAnchorablePane>
+                            <LayoutAnchorable IconSource="/Src/Img/Anchor.png" AutoHideMinHeight="250" AutoHideMinWidth="250" AutoHideHeight="250" AutoHideWidth="250">
+                                
+                            </LayoutAnchorable>
+                        </LayoutAnchorablePane>
+                    </LayoutAnchorablePaneGroup>
+                </LayoutPanel>
+            </LayoutRoot>
+        </DockingManager>
+        <StatusBar Grid.Row="2" Background="DarkSlateBlue" VerticalAlignment="Center">
+            <Grid>
+                <StackPanel  Orientation="Horizontal">
+                    <iconPacks:PackIconMaterial Kind="{Binding Icon, FallbackValue= 'Home'}" Margin="25 5 5 5 " VerticalAlignment="Center" Foreground="White"/>
+                    <Label  Content="{Binding TitleState, FallbackValue='Menu Inicial'}" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White"/>
+                </StackPanel>
+            </Grid>
+        </StatusBar>
+    </Grid>
+    
+</mah:MetroWindow>

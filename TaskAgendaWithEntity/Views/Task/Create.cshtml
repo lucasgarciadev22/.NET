@@ -1,0 +1,40 @@
+@model TaskAgendaWithEntity.Models.TaskModel
+
+@{
+  ViewData["Title"] = "Add New Task";
+}
+
+<h1>Add a new Task to your list...</h1>
+
+<hr />
+<div class="row">
+  <div class="col-md-4">
+    <form asp-action="Create">
+      <div class="form-group">
+        <label asp-for="Title" class="control-label"></label>
+        <input asp-for="Title" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label asp-for="Description" class="control-label"></label>
+        <input asp-for="Description" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label asp-for="Date" class="control-label"></label>
+        <input type="date" asp-for="Date" class="form-check-input" />
+      </div>
+      <div class="form-group">
+        <label asp-for="Status" class="control-label"></label>
+        <input asp-for="Status" class="form-control" />
+      </div>
+      <br>
+      <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" style="background-color: rgb(76, 166, 58);"/>
+      </div>
+    </form>
+  </div>
+</div>
+<hr />
+<br>
+<div>
+  <a asp-action="Index">Back</a>
+</div>

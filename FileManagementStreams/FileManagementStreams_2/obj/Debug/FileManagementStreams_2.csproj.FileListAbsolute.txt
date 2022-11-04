@@ -1,0 +1,7 @@
+C:\Users\lucas10\source\repos\FileManagementStreams\FileManagementStreams_2\bin\Debug\FileManagementStreams_2.exe.config
+C:\Users\lucas10\source\repos\FileManagementStreams\FileManagementStreams_2\bin\Debug\FileManagementStreams_2.exe
+C:\Users\lucas10\source\repos\FileManagementStreams\FileManagementStreams_2\bin\Debug\FileManagementStreams_2.pdb
+C:\Users\lucas10\source\repos\FileManagementStreams\FileManagementStreams_2\obj\Debug\FileManagementStreams_2.csproj.CoreCompileInputs.cache
+C:\Users\lucas10\source\repos\FileManagementStreams\FileManagementStreams_2\obj\Debug\FileManagementStreams_2.exe
+C:\Users\lucas10\source\repos\FileManagementStreams\FileManagementStreams_2\obj\Debug\FileManagementStreams_2.pdb
+C:\Users\lucas10\source\repos\FileManagementStreams\FileManagementStreams_2\obj\Debug\FileManagementStreams_2.csprojAssemblyReference.cache

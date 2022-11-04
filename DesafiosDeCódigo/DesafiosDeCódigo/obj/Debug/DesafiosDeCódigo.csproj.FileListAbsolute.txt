@@ -1,0 +1,7 @@
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\DesafiosDeCódigo\DesafiosDeCódigo\bin\Debug\DesafiosDeCódigo.exe.config
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\DesafiosDeCódigo\DesafiosDeCódigo\bin\Debug\DesafiosDeCódigo.exe
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\DesafiosDeCódigo\DesafiosDeCódigo\bin\Debug\DesafiosDeCódigo.pdb
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\DesafiosDeCódigo\DesafiosDeCódigo\obj\Debug\DesafiosDeCódigo.csprojAssemblyReference.cache
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\DesafiosDeCódigo\DesafiosDeCódigo\obj\Debug\DesafiosDeCódigo.csproj.CoreCompileInputs.cache
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\DesafiosDeCódigo\DesafiosDeCódigo\obj\Debug\DesafiosDeCódigo.exe
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\DesafiosDeCódigo\DesafiosDeCódigo\obj\Debug\DesafiosDeCódigo.pdb

@@ -1,0 +1,7 @@
+C:\Users\lucas10\source\repos\DesafioPottencial\DesafioIntermediario\bin\Debug\DesafioIntermediario.exe.config
+C:\Users\lucas10\source\repos\DesafioPottencial\DesafioIntermediario\bin\Debug\DesafioIntermediario.exe
+C:\Users\lucas10\source\repos\DesafioPottencial\DesafioIntermediario\bin\Debug\DesafioIntermediario.pdb
+C:\Users\lucas10\source\repos\DesafioPottencial\DesafioIntermediario\obj\Debug\DesafioIntermediario.csprojAssemblyReference.cache
+C:\Users\lucas10\source\repos\DesafioPottencial\DesafioIntermediario\obj\Debug\DesafioIntermediario.csproj.CoreCompileInputs.cache
+C:\Users\lucas10\source\repos\DesafioPottencial\DesafioIntermediario\obj\Debug\DesafioIntermediario.exe
+C:\Users\lucas10\source\repos\DesafioPottencial\DesafioIntermediario\obj\Debug\DesafioIntermediario.pdb

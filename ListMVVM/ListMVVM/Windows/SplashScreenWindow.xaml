@@ -1,0 +1,44 @@
+﻿<mah:MetroWindow x:Class="ListMVVM.Windows.SplashScreenWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:local="clr-namespace:ListMVVM.Windows"
+        mc:Ignorable="d"
+                 Height="500" Width="800" WindowStyle="None" ResizeMode="NoResize" Background="Transparent" TitleForeground="DarkSlateBlue"
+                 ScrollViewer.VerticalScrollBarVisibility="Disabled" AllowsTransparency="True" IsCloseButtonEnabled="False" 
+                 IsMaxRestoreButtonEnabled="False" IsMinButtonEnabled="False" KeepBorderOnMaximize="False" ShowCloseButton="False" 
+                 ShowDialogsOverTitleBar="False" ShowIconOnTitleBar="False" ShowMaxRestoreButton="False" ShowMinButton="False" 
+                 ShowSystemMenu="False" ShowTitleBar="True" WindowTitleBrush="Transparent" ShowSystemMenuOnRightClick="False" BorderBrush="Transparent" 
+                 WindowStartupLocation="CenterScreen" IsWindowDraggable="False" TextOptions.TextFormattingMode="Display">
+    <mah:MetroWindow.Effect>
+        <DropShadowEffect ShadowDepth="10" BlurRadius="10" Opacity="0.3"/>
+    </mah:MetroWindow.Effect>
+
+    <Border Background="DarkSlateBlue" CornerRadius="12">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="15"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Vertical" Grid.Row="0">
+                
+        <iconPacks:PackIconJamIcons Kind="TaskListF" Height="250" Width="500" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="30"
+                                    Foreground="White"/>
+            <TextBlock Text="List MVVM is loading..." Margin="8" FontSize="50" Foreground="White" HorizontalAlignment="Center" />
+            </StackPanel>
+
+            <ProgressBar x:Name="progressBar" Grid.Row="1" VerticalAlignment="Center">
+             
+            </ProgressBar>
+            
+            <TextBlock Text="List MVVM v1.0   © Copyright Lucas Garcia, 2022" Margin="15" FontSize="20" Foreground="White" VerticalAlignment="Bottom" 
+                       Grid.Row="2"/>
+        </Grid>
+
+    </Border>
+</mah:MetroWindow>

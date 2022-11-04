@@ -1,0 +1,7 @@
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\CollectionsLINQ\CollectionsLINQ\bin\Debug\CollectionsLINQ.exe.config
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\CollectionsLINQ\CollectionsLINQ\bin\Debug\CollectionsLINQ.exe
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\CollectionsLINQ\CollectionsLINQ\bin\Debug\CollectionsLINQ.pdb
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\CollectionsLINQ\CollectionsLINQ\obj\Debug\CollectionsLINQ.csproj.CoreCompileInputs.cache
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\CollectionsLINQ\CollectionsLINQ\obj\Debug\CollectionsLINQ.exe
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\CollectionsLINQ\CollectionsLINQ\obj\Debug\CollectionsLINQ.pdb
+C:\Users\lucas10\Desktop\PROJETOS DE TESTE\CollectionsLINQ\CollectionsLINQ\obj\Debug\CollectionsLINQ.csprojAssemblyReference.cache

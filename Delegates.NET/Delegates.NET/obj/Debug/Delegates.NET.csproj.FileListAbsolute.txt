@@ -1,0 +1,7 @@
+C:\Users\lucas10\source\repos\Delegates.NET\Delegates.NET\bin\Debug\Delegates.NET.exe.config
+C:\Users\lucas10\source\repos\Delegates.NET\Delegates.NET\bin\Debug\Delegates.NET.exe
+C:\Users\lucas10\source\repos\Delegates.NET\Delegates.NET\bin\Debug\Delegates.NET.pdb
+C:\Users\lucas10\source\repos\Delegates.NET\Delegates.NET\obj\Debug\Delegates.NET.csprojAssemblyReference.cache
+C:\Users\lucas10\source\repos\Delegates.NET\Delegates.NET\obj\Debug\Delegates.NET.csproj.CoreCompileInputs.cache
+C:\Users\lucas10\source\repos\Delegates.NET\Delegates.NET\obj\Debug\Delegates.NET.exe
+C:\Users\lucas10\source\repos\Delegates.NET\Delegates.NET\obj\Debug\Delegates.NET.pdb

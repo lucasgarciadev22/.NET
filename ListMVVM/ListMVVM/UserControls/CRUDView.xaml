@@ -1,0 +1,359 @@
+﻿<UserControl x:Class="ListMVVM.UserControls.CRUDView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ListMVVM.UserControls"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" 
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:viewModel="clr-namespace:ListMVVM.ViewModel;assembly=ListMVVM.ViewModel"
+             xmlns:avalonDock="https://github.com/Dirkster99/AvalonDock"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="0">
+            <Button Content=" x " Margin="8" Padding="8 2 8 4" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="IndianRed" Foreground="White" Focusable="False">
+                <Button.ToolTip>
+                    <ToolTip >
+                        <ToolTip.Template>
+                            <ControlTemplate>
+                                <Grid>
+
+                                    <Border Background="DarkSlateBlue"
+                                                                    BorderBrush="DarkSlateBlue"
+                                                                    Opacity="0.9"
+                                                                    SnapsToDevicePixels="True"
+                                                                    CornerRadius="12">
+
+                                    </Border>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" 
+                                                                       Margin="8"
+                                                                       Foreground="WhiteSmoke"
+                                                                       FontSize="12"
+                                                                       Text="Clique para voltar ao Menu Inicial "
+                                                                       TextOptions.TextFormattingMode="Display"
+                                                                       TextOptions.TextRenderingMode="ClearType"/>
+                                        <iconPacks:PackIconMaterial Grid.Column="1" 
+                                                                                            Kind="Home" Margin="5" VerticalAlignment="Center" Foreground="White"/>
+                                    </Grid>
+
+                                </Grid>
+                            </ControlTemplate>
+                        </ToolTip.Template>
+                    </ToolTip>
+                </Button.ToolTip>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <i:InvokeCommandAction Command="{Binding CloseThisControl_ClickCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Margin="8 0 8 0" Content="Nome do Item"/>
+                        <TextBox  x:Name="Name" Grid.Row="1" Margin="8 0 8 0" Text="{Binding ConfigItem.ItemName}"  mah:ControlsHelper.CornerRadius="5" 
+                                  mah:TextBoxHelper.ClearTextButton="True" IsReadOnly="{Binding Remove}"
+                                  mah:TextBoxHelper.Watermark="Insira o nome do Item"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Margin="8 0 8 0" Content="Quantidade do Item"/>
+                        <TextBox x:Name="Qtd" Grid.Row="1" Margin="8 0 8 0" Text="{Binding ConfigItem.ItemQtd}" IsEnabled="{Binding Text.Length, ElementName=Name}" 
+                                 mah:ControlsHelper.CornerRadius="5"  IsReadOnly="{Binding Remove}"
+                                 mah:TextBoxHelper.ClearTextButton="True" mah:TextBoxHelper.Watermark="Insira uma quantidade "/>
+                    </Grid>
+                </Grid>
+
+                <StackPanel Grid.Row="1" VerticalAlignment="Center" Orientation="Horizontal">
+                    <Button Content="{Binding ButtonText}" Margin="8" Padding="8" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{Binding ButtonColor}" Foreground="White" 
+                            IsEnabled="{Binding Text.Length, ElementName=Qtd}">
+                        <Button.ToolTip>
+                            <ToolTip >
+                                <ToolTip.Template>
+                                    <ControlTemplate>
+                                        <Grid>
+
+                                            <Border Background="DarkSlateBlue"
+                                                                    BorderBrush="DarkSlateBlue"
+                                                                    Opacity="0.9"
+                                                                    SnapsToDevicePixels="True"
+                                                                    CornerRadius="12">
+
+                                            </Border>
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Grid.Column="0" 
+                                                                       Margin="8"
+                                                                       Foreground="WhiteSmoke"
+                                                                       FontSize="12"
+                                                                       Text="{Binding ToolTipTxt, FallbackValue = 'Clique aqui para adicionar um item'}"
+                                                                       TextOptions.TextFormattingMode="Display"
+                                                                       TextOptions.TextRenderingMode="ClearType"/>
+                                                <iconPacks:PackIconMaterial Grid.Column="1" 
+                                                                                            Kind="{Binding ToolTipIcon, FallbackValue= 'FilePlus'}" Margin="5" VerticalAlignment="Center" Foreground="White"/>
+                                            </Grid>
+
+                                        </Grid>
+                                    </ControlTemplate>
+                                </ToolTip.Template>
+                            </ToolTip>
+                        </Button.ToolTip>
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding AddItem_ClickCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
+                    <Button Content="CANCELAR" Margin="8" Padding="8" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="IndianRed" Foreground="White" Visibility="{Binding Visibility}" 
+                            IsEnabled="{Binding Text.Length, ElementName=Name}">
+                        <Button.ToolTip>
+                            <ToolTip >
+                                <ToolTip.Template>
+                                    <ControlTemplate>
+                                        <Grid>
+
+                                            <Border Background="DarkSlateBlue"
+                                                                    BorderBrush="DarkSlateBlue"
+                                                                    Opacity="0.9"
+                                                                    SnapsToDevicePixels="True"
+                                                                    CornerRadius="12">
+
+                                            </Border>
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Grid.Column="0" 
+                                                                       Margin="8"
+                                                                       Foreground="WhiteSmoke"
+                                                                       FontSize="12"
+                                                                       Text="Clique aqui para cancelar a ação atual"
+                                                                       TextOptions.TextFormattingMode="Display"
+                                                                       TextOptions.TextRenderingMode="ClearType"/>
+                                                <iconPacks:PackIconMaterial Grid.Column="1" 
+                                                                                            Kind="Close" Margin="5" VerticalAlignment="Center" Foreground="White"/>
+                                            </Grid>
+
+                                        </Grid>
+                                    </ControlTemplate>
+                                </ToolTip.Template>
+                            </ToolTip>
+                        </Button.ToolTip>
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding CalcelItem_ClickCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
+                </StackPanel>
+
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <TextBox x:Name="Filter" Grid.Row="1" Margin="8 0 8 0" Text="{Binding FilteredItemName}" mah:ControlsHelper.CornerRadius="5" 
+                                  mah:TextBoxHelper.ClearTextButton="True" Height="30"
+                                  mah:TextBoxHelper.Watermark="Busque um item pelo nome"/>
+                    <Button Content="BUSCAR" Margin="8" Padding="8" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="DarkSlateBlue" Foreground="White" Visibility="{Binding Visibility}">
+                        <Button.ToolTip>
+                            <ToolTip >
+                                <ToolTip.Template>
+                                    <ControlTemplate>
+                                        <Grid>
+
+                                            <Border Background="DarkSlateBlue"
+                                                                    BorderBrush="DarkSlateBlue"
+                                                                    Opacity="0.9"
+                                                                    SnapsToDevicePixels="True"
+                                                                    CornerRadius="12">
+
+                                            </Border>
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Grid.Column="0" 
+                                                                       Margin="8"
+                                                                       Foreground="WhiteSmoke"
+                                                                       FontSize="12"
+                                                                       Text="Clique aqui para buscar o item"
+                                                                       TextOptions.TextFormattingMode="Display"
+                                                                       TextOptions.TextRenderingMode="ClearType"/>
+                                                <iconPacks:PackIconMaterial Grid.Column="1" 
+                                                                                            Kind="FileSearch" Margin="5" VerticalAlignment="Center" Foreground="White"/>
+                                            </Grid>
+
+                                        </Grid>
+                                    </ControlTemplate>
+                                </ToolTip.Template>
+                            </ToolTip>
+                        </Button.ToolTip>
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding FilterItem_ClickCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
+                </StackPanel>
+                <DataGrid x:Name="ItemsGrid" Grid.Row="1" ItemsSource="{Binding AllItems}" SelectedItem="{Binding SelectedItem}"
+                      IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" SelectedIndex="{Binding SelectedIndex}" Foreground="DarkSlateBlue">
+
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn x:Name="Id" Header="Id" Binding="{Binding Id}"/>
+                        <DataGridTextColumn x:Name="Nome" Header="Nome" Binding="{Binding ItemName}"/>
+                        <DataGridTextColumn x:Name="Quantidade" Header="Quanditade" Binding="{Binding ItemQtd}" />
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Editar" Margin="8" Padding="8 4 8 4" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Focusable="False">
+                                        <Button.ToolTip>
+                                            <ToolTip >
+                                                <ToolTip.Template>
+                                                    <ControlTemplate>
+                                                        <Grid>
+
+                                                            <Border Background="DarkSlateBlue"
+                                                                    BorderBrush="DarkSlateBlue"
+                                                                    Opacity="0.9"
+                                                                    
+                                                                    SnapsToDevicePixels="True"
+                                                                    CornerRadius="12">
+
+                                                            </Border>
+                                                            <Grid>
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition/>
+                                                                    <ColumnDefinition/>
+                                                                </Grid.ColumnDefinitions>
+                                                                <TextBlock Grid.Column="0" 
+                                                                       Margin="8"
+                                                                       Foreground="WhiteSmoke"
+                                                                       FontSize="12"
+                                                                       Text="Selecione um item e clique aqui para editar"
+                                                                       TextOptions.TextFormattingMode="Display"
+                                                                       TextOptions.TextRenderingMode="ClearType"/>
+                                                                <iconPacks:PackIconMaterial Grid.Column="1" 
+                                                                                            Kind="FileEdit" Margin="5" VerticalAlignment="Center" Foreground="White"/>
+                                                            </Grid>
+
+                                                        </Grid>
+                                                    </ControlTemplate>
+                                                </ToolTip.Template>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                        <i:Interaction.Triggers>
+                                            <i:EventTrigger EventName="Click">
+                                                <i:InvokeCommandAction Command="{Binding Path=DataContext.EditItem_ClickCommand,
+                                                                                RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}"/>
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+                                    </Button>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate >
+                                    <Button Content="Remove" Margin="8" Padding="8 4 8 4" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="IndianRed" Foreground="White" Focusable="False">
+                                        <i:Interaction.Triggers>
+                                            <i:EventTrigger EventName="Click">
+                                                <i:InvokeCommandAction Command="{Binding Path=DataContext.RemoveItem_ClickCommand,
+                                                                                RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}"/>
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+                                        <Button.ToolTip>
+                                            <ToolTip >
+                                                <ToolTip.Template>
+                                                    <ControlTemplate>
+                                                        <Grid>
+
+                                                            <Border Background="DarkSlateBlue"
+                                                                    BorderBrush="DarkSlateBlue"
+                                                                    Opacity="0.9"
+                                                                    SnapsToDevicePixels="True"
+                                                                    CornerRadius="12">
+
+                                                            </Border>
+                                                            <Grid>
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition/>
+                                                                    <ColumnDefinition/>
+                                                                </Grid.ColumnDefinitions>
+                                                                <TextBlock Grid.Column="0" 
+                                                                       Margin="8"
+                                                                       Foreground="WhiteSmoke"
+                                                                       FontSize="12"
+                                                                       Text="Selecione um item e clique aqui para remover"
+                                                                       TextOptions.TextFormattingMode="Display"
+                                                                       TextOptions.TextRenderingMode="ClearType"/>
+                                                                <iconPacks:PackIconMaterial Grid.Column="1" 
+                                                                                            Kind="FileRemove" Margin="5" VerticalAlignment="Center" Foreground="White"/>
+                                                            </Grid>
+
+                                                        </Grid>
+                                                    </ControlTemplate>
+                                                </ToolTip.Template>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+
+            </Grid>
+
+        </Grid>
+    </Grid>
+
+</UserControl>

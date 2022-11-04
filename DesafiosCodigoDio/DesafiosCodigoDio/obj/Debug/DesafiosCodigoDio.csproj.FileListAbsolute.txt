@@ -1,0 +1,7 @@
+C:\Users\lucas10\source\repos\DesafiosCodigoDio\DesafiosCodigoDio\bin\Debug\DesafiosCodigoDio.exe.config
+C:\Users\lucas10\source\repos\DesafiosCodigoDio\DesafiosCodigoDio\bin\Debug\DesafiosCodigoDio.exe
+C:\Users\lucas10\source\repos\DesafiosCodigoDio\DesafiosCodigoDio\bin\Debug\DesafiosCodigoDio.pdb
+C:\Users\lucas10\source\repos\DesafiosCodigoDio\DesafiosCodigoDio\obj\Debug\DesafiosCodigoDio.csprojAssemblyReference.cache
+C:\Users\lucas10\source\repos\DesafiosCodigoDio\DesafiosCodigoDio\obj\Debug\DesafiosCodigoDio.csproj.CoreCompileInputs.cache
+C:\Users\lucas10\source\repos\DesafiosCodigoDio\DesafiosCodigoDio\obj\Debug\DesafiosCodigoDio.exe
+C:\Users\lucas10\source\repos\DesafiosCodigoDio\DesafiosCodigoDio\obj\Debug\DesafiosCodigoDio.pdb
