@@ -5,15 +5,19 @@ using System.Threading.Tasks;
 
 namespace SolidCSharp.Models
 {
-    public class PaymentRequest
+  public class PaymentRequest
+  {
+    public double Value { get; set; }
+
+    public PaymentType PaymentType { get; set; }
+
+    public int Installments { get; set; }
+
+    public PaymentRequest(PaymentType paymentType, double value, int installments = 0)
     {
-        public double Value { get; set; }
-
-        public PaymentType PaymentType { get; set; }
-
-        public PaymentRequest(PaymentType paymentType, double value)
-        {
-            this.Value = value;
-        }
+      PaymentType = paymentType;
+      Value = value;
+      Installments = installments;
     }
+  }
 }
