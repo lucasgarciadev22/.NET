@@ -16,7 +16,14 @@ namespace SolidCSharp.Models
 
       Message.Save(paymentProof);
 
+      LimitCheck();
+
       return paymentProof;
+    }
+
+    private string LimitCheck()
+    {
+      return "Your credit limit was checked, and it's OK!";
     }
   }
 }
