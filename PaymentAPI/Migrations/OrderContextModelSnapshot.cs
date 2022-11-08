@@ -69,6 +69,8 @@ namespace tech_test_payment_api.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("SellerId");
+
                     b.ToTable("OrderRegistries");
                 });
 
@@ -99,6 +101,17 @@ namespace tech_test_payment_api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Sellers");
+                });
+
+            modelBuilder.Entity("tech_test_payment_api.Models.OrderRegistry", b =>
+                {
+                    b.HasOne("tech_test_payment_api.Models.Seller", "Seller")
+                        .WithMany()
+                        .HasForeignKey("SellerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Seller");
                 });
 #pragma warning restore 612, 618
         }

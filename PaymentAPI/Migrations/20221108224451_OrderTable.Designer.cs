@@ -12,7 +12,7 @@ using tech_test_payment_api.Context;
 namespace tech_test_payment_api.Migrations
 {
     [DbContext(typeof(OrderContext))]
-    [Migration("20221025223059_OrderTable")]
+    [Migration("20221108224451_OrderTable")]
     partial class OrderTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -71,6 +71,8 @@ namespace tech_test_payment_api.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("SellerId");
+
                     b.ToTable("OrderRegistries");
                 });
 
@@ -101,6 +103,17 @@ namespace tech_test_payment_api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Sellers");
+                });
+
+            modelBuilder.Entity("tech_test_payment_api.Models.OrderRegistry", b =>
+                {
+                    b.HasOne("tech_test_payment_api.Models.Seller", "Seller")
+                        .WithMany()
+                        .HasForeignKey("SellerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Seller");
                 });
 #pragma warning restore 612, 618
         }
