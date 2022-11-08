@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Newtonsoft.Json.Converters;
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-
 namespace SolidCSharp.Models
 {
-    public class PaymentProof
+  public class PaymentProof
     {
         public string Description { get; set; }
         public string User { get; set; }
@@ -14,13 +10,11 @@ namespace SolidCSharp.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public PaymentType PaymentType { get; set; }
 
-        public PaymentProof(string descricao, string valor, PaymentType paymentType)
+        public PaymentProof(string description, string value, PaymentType paymentType)
         {
-            this.Value = descricao;
-            this.Value = valor;
-            this.PaymentType = paymentType;
+            Description = description;
+            Value = value;
+            PaymentType = paymentType;
         }
-
-
     }
 }

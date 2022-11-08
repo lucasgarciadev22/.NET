@@ -7,11 +7,11 @@ namespace SolidCSharp.Models
 {
     public class Payment
     {
-        private PaymentProofGenerator _paymentProofGenerator;
+        private IPaymentProofGenerator _paymentProofGenerator;
 
-        public Payment(PaymentProofGenerator paymentProofGenerator)
+        public Payment(IPaymentProofGenerator paymentProofGenerator)
         {
-            this._paymentProofGenerator = paymentProofGenerator;
+            _paymentProofGenerator = paymentProofGenerator;
         }
         public PaymentProof RegisterNewPayment(PaymentRequest paymentRequest)
         {
