@@ -8,7 +8,9 @@ namespace tech_test_payment_api.Models
     [Key()]
     public int Id { get; set; }
     public string StatusMessage { get; set; }
+    [ForeignKey("Seller")]
     public int SellerId { get; set; }
+    public virtual Seller Seller { get; set; } //lazyload
     public string SellerCpf { get; set; }
     public string SellerName { get; set; }
     public string SellerEmail { get; set; }
@@ -19,7 +21,6 @@ namespace tech_test_payment_api.Models
     public OrderStatus OrderStatus { get; set; }
     public OrderRegistry(Seller seller, string orderNumber, DateTime orderDate, string orderProducts, OrderStatus orderStatus)
     {
-      SellerId = seller.Id;
       SellerCpf = seller.Cpf;
       SellerName = seller.Name;
       SellerEmail = seller.Email;
