@@ -32,6 +32,10 @@ namespace ReactNetCore
         {
             if (env.IsDevelopment())
             {
+                // Here we add the webpack middleware with the deprecated method:
+#pragma warning disable CS0618 // Type or member is obsolete
+                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions { HotModuleReplacement = true, });
+#pragma warning restore CS0618 // Type or member is obsolete
                 app.UseDeveloperExceptionPage();
             }
             else
