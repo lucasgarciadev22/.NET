@@ -12,11 +12,11 @@ namespace ReactNetCore.Controllers
     [ApiController]
     public class UserController
     {
-        private readonly ILogger<UsersController> _logger;
+        private readonly ILogger<UserController> _logger;
 
         static readonly Models.IUserRepository repository = new Models.UserRepository();
 
-        public UsersController(ILogger<UsersController> logger)
+        public UserController(ILogger<UserController> logger)
         {
             _logger = logger;
         }

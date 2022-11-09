@@ -3,6 +3,7 @@ import DisplayUsers from './components/DisplayUsers';
 import { Header } from './components/Header';
 import UserCreate from './components/UserCreate';
 import { Users } from './components/Users';
+import { getAllUsers, createUser } from './services/UserService'
 import './custom.css';
 
 export default class App extends Component {
@@ -13,7 +14,7 @@ export default class App extends Component {
     numberOfUsers: 0
   }
 
-  createUser = (e) => {
+  createUser = () => {
     createUser(this.state.user)
       .then(response => {
         console.log(response);
