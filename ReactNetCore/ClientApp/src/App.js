@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import DisplayUsers from './components/DisplayUsers';
-import { Header } from './components/Header';
-import UserCreate from './components/UserCreate';
-import { Users } from './components/Users';
+import DisplayUsers from './components/DisplayUsers/DisplayUsers';
+import { Header } from './components/Header/Header';
+import UserCreate from './components/UserCreate/UserCreate';
+import { Users } from './components/Users/Users';
 import { getAllUsers, createUser } from './services/UserService'
 import './custom.css';
 
