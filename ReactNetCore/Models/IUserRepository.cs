@@ -10,5 +10,7 @@ namespace ReactNetCore.Models
         IEnumerable<UserModel> GetAll();
 
         UserModel Add(UserModel user);
+
+        UserModel Remove(UserModel user);
     }
 }

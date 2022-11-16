@@ -35,5 +35,13 @@ namespace ReactNetCore.Controllers
         {
             return repository.Add(item);
         }
+
+        [HttpDelete]
+        [Route("api/user")]
+        [Consumes("application/json")]
+        public Models.UserModel DeleteUser(Models.UserModel item)
+        {
+            return repository.Remove(item);
+        }
     }
 }

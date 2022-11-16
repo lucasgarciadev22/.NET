@@ -22,6 +22,14 @@ export default class App extends Component {
       });
   }
 
+  deleteUser = () => {
+    deleteUser(this.state.user)
+      .then(response => {
+        console.log(response);
+        this.setState({ numberOfUsers: this.state.numberOfUsers - 1 })
+      });
+  }
+
   getAllUsers = () => {
     getAllUsers()
       .then(users => {
