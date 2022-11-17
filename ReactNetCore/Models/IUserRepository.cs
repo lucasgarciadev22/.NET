@@ -11,6 +11,6 @@ namespace ReactNetCore.Models
 
         UserModel Add(UserModel user);
 
-        UserModel Remove(UserModel user);
+        void Remove(UserModel user);
     }
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Users = ({users}) => {
+export const Users = ({users,deleteUser}) => {
 
     console.log('users length:::', users.length)
     if (users.length === 0) return null
@@ -13,6 +13,7 @@ export const Users = ({users}) => {
                   <td>{user.firstName}</td>
                   <td>{user.lastName}</td>
                   <td>{user.email}</td>
+                  <td>{ <button type="button" onClick={(e) => deleteUser()} className="btn btn-warning">DeleteUser</button>}</td>
               </tr>
           )
     }

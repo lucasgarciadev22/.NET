@@ -3,7 +3,7 @@ import DisplayUsers from './components/DisplayUsers/DisplayUsers';
 import { Header } from './components/Header/Header';
 import UserCreate from './components/UserCreate/UserCreate';
 import { Users } from './components/Users/Users';
-import { getAllUsers, createUser } from './services/UserService'
+import { getAllUsers, createUser,deleteUser } from './services/UserService'
 import './custom.css';
 
 export default class App extends Component {

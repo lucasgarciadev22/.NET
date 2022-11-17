@@ -31,15 +31,13 @@ namespace ReactNetCore.Models
             return user;
         }
 
-        public UserModel Remove(UserModel user)
+        public void Remove(UserModel user)
         {
             if (user == null)
             {
                 throw new ArgumentNullException("User can't be null");
             }
-            user.Id = _nextId--;
-            users.Remove(user);
-            return user;
+            users.RemoveAt(user.Id);
         }
     }
 }
