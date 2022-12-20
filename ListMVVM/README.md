@@ -14,4 +14,59 @@
 
 By following these principles, MVVM allows for a clean separation of concerns between the different components of the application, making it easier to maintain and test. It is especially useful in applications that use a lot of data binding, as it allows the ViewModel to act as a single source of truth for the data displayed in the View.
 
+**Examples:**
+
+Model:
+
+```csharp
+public class Person
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+}
+```
+
+ViewModel:
+
+```csharp
+public class MainViewModel
+{
+    public Person Person { get; set; }
+    public ICommand SaveCommand { get; set; }
+
+    public MainViewModel()
+    {
+        Person = new Person { FirstName = "John", LastName = "Doe" };
+        SaveCommand = new RelayCommand(Save);
+    }
+
+    private void Save()
+    {
+        // Save the person to the database
+    }
+}
+```
+
+View:
+
+```csharp
+<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+  <StackPanel>
+    <TextBox Text="{Binding Person.FirstName, UpdateSourceTrigger=PropertyChanged}" />
+    <TextBox Text="{Binding Person.LastName, UpdateSourceTrigger=PropertyChanged}" />
+    <Button Command="{Binding SaveCommand}" Content="Save" />
+  </StackPanel>
+</Window>
+
+```
+
+In this example, the View displays two text boxes for the first and last name of a person, as well as a button to save the person. The View is bound to the Person property of the ViewModel, which is a Person object. When the user changes the text in the text boxes, the changes are automatically reflected in the Person object through the two-way data binding. The Save button is also bound to the SaveCommand property of the ViewModel, which is an ICommand object that is responsible for handling the save action.
+
 *Extracted from ChatOpenAI*
