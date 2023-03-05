@@ -1,0 +1,92 @@
+[
+  {
+    "Id": 1,
+    "Name": "NEW MONGO DB PRODUCT TEST",
+    "Color": "GREEN",
+    "Price": 31.5,
+    "Size": "P",
+    "Genre": "U",
+    "RegistrationDate": "04/03/2023"
+  },
+  {
+    "Id": 2,
+    "Name": "TEST PRODUCT 2",
+    "Color": "BLUE",
+    "Price": 25.0,
+    "Size": "M",
+    "Genre": "F",
+    "RegistrationDate": "03/28/2023"
+  },
+  {
+    "Id": 3,
+    "Name": "BEST PRODUCT EVER",
+    "Color": "BLACK",
+    "Price": 99.99,
+    "Size": "L",
+    "Genre": "M",
+    "RegistrationDate": "02/14/2023"
+  },
+  {
+    "Id": 4,
+    "Name": "SPECIAL EDITION",
+    "Color": "RED",
+    "Price": 50.0,
+    "Size": "S",
+    "Genre": "U",
+    "RegistrationDate": "01/01/2023"
+  },
+  {
+    "Id": 5,
+    "Name": "COOL PRODUCT",
+    "Color": "YELLOW",
+    "Price": 20.0,
+    "Size": "M",
+    "Genre": "U",
+    "RegistrationDate": "04/03/2023"
+  },
+  {
+    "Id": 6,
+    "Name": "BEST SELLER",
+    "Color": "WHITE",
+    "Price": 75.0,
+    "Size": "L",
+    "Genre": "M",
+    "RegistrationDate": "03/01/2023"
+  },
+  {
+    "Id": 7,
+    "Name": "NEW RELEASE",
+    "Color": "GRAY",
+    "Price": 45.0,
+    "Size": "M",
+    "Genre": "F",
+    "RegistrationDate": "04/02/2023"
+  },
+  {
+    "Id": 8,
+    "Name": "POPULAR ITEM",
+    "Color": "PURPLE",
+    "Price": 15.0,
+    "Size": "S",
+    "Genre": "U",
+    "RegistrationDate": "03/15/2023"
+  },
+  {
+    "Id": 9,
+    "Name": "SPORTSWEAR",
+    "Color": "NAVY",
+    "Price": 65.0,
+    "Size": "L",
+    "Genre": "U",
+    "RegistrationDate": "02/28/2023"
+  },
+  {
+    "Id": 10,
+    "Name": "FASHION ITEM",
+    "Color": "PINK",
+    "Price": 55.0,
+    "Size": "M",
+    "Genre": "F",
+    "RegistrationDate": "04/03/2023"
+  }
+]
