@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/ed0565a5-9663-4239-a464-c0c5b974dafc/resourceGroups/MVCCloudApi/providers/Microsoft.Web/sites/azureMvcWebApp",
+  "appService.deploySubpath": "ASPNETMVC"
+}
