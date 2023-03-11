@@ -1,0 +1,5 @@
+{
+  "appService.preDeployTask": "publish-release",
+  "appService.deploySubpath": ".",
+  "appService.defaultWebAppToDeploy": "/subscriptions/ed0565a5-9663-4239-a464-c0c5b974dafc/resourceGroups/azuremvcapis/providers/Microsoft.Web/sites/taskmanagermvc"
+}

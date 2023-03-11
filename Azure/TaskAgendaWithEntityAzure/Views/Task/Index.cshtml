@@ -1,0 +1,62 @@
+@model IEnumerable<TaskAgendaWithEntity.Models.TaskModel>
+
+@{
+  ViewData["Title"] = "My Tasks";
+}
+
+<h2>My Tasks:</h2>
+
+<form asp-action="Create">
+  <div class="form-group">
+    <input type="submit" asp-action="Create" value="New" class="btn btn-primary" />
+  </div>
+</form>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        @Html.DisplayNameFor(model => model.Id)
+      </th>
+      <th>
+        @Html.DisplayNameFor(model => model.Title)
+      </th>
+      <th>
+        @Html.DisplayNameFor(model => model.Description)
+      </th>
+      <th>
+        @Html.DisplayNameFor(model => model.Date)
+      </th>
+      <th>
+        @Html.DisplayNameFor(model => model.Status)
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var item in Model)
+    {
+      <tr>
+        <td>
+          @Html.DisplayName(item.Id.ToString())
+        </td>
+        <td>
+          @Html.DisplayName(item.Title)
+        </td>
+        <td>
+          @Html.DisplayName(item.Description)
+        </td>
+        <td>
+          @Html.DisplayName(item.Date.ToShortTimeString())
+        </td>
+        <td>
+          @Html.DisplayName(item.Status.ToString())
+        </td>
+        <td>
+          <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+          <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+          <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
