@@ -28,7 +28,7 @@ namespace TemperatureConverter
     {
       double result = (celsius * 9) / 5 + 32;
 
-      string responseMessage = $"The temperature {celsius.ToString(CultureInfo.InvariantCulture)}°C converted to Fahrenheit is {result:N2, CultureInfo.InvariantCulture}°C";
+      string responseMessage = $"The temperature {celsius.ToString(CultureInfo.InvariantCulture)}°C converted to Fahrenheit is {result.ToString("F2", CultureInfo.InvariantCulture)}°C";
 
       _logger.LogInformation($"Fahrenheit value received:{celsius}");
 

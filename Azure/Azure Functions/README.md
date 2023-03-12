@@ -1,0 +1,1 @@
+### This are the Azure Functions using a HTTP OpenAPI model
