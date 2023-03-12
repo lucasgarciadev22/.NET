@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -20,14 +21,14 @@ namespace TemperatureConverter
 
     [FunctionName("CelsiusToFahrenheitConverter")]
     [OpenApiOperation(operationId: "Run", tags: new[] { "Conversion" })]
-    [OpenApiParameter(name: "fahrenheit", In = ParameterLocation.Path, Required = true, Type = typeof(double), Description = "This Azure Function will convert a Celsius input into a Fahrenheit output")]
+    [OpenApiParameter(name: "celsius", In = ParameterLocation.Path, Required = true, Type = typeof(double), Description = "This Azure Function will convert a Celsius input into a Fahrenheit output")]
     [OpenApiResponseWithBody(statusCode: HttpStatusCode.OK, contentType: "text/plain", bodyType: typeof(string), Description = "Returns the Fahrenheit equivalent value")]
     public async Task<IActionResult> Run(
-        [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "CelsiusToFahrenheitConverter/{fahrenheit}")] HttpRequest req, double celsius)
+        [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "CelsiusToFahrenheitConverter/{celsius}")] HttpRequest req, double celsius)
     {
       double result = (celsius * 9) / 5 + 32;
 
-      string responseMessage = $"The temperature {celsius}F° converted to Celsius is {result:N2}C°";
+      string responseMessage = $"The temperature {celsius.ToString(CultureInfo.InvariantCulture)}°C converted to Fahrenheit is {result:N2, CultureInfo.InvariantCulture}°C";
 
       _logger.LogInformation($"Fahrenheit value received:{celsius}");
 

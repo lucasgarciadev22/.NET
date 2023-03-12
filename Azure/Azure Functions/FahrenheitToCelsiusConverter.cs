@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -27,7 +28,7 @@ namespace TemperatureConverter
     {
       double result = (fahrenheit - 32) * 5 / 9;
 
-      string responseMessage = $"The temperature {fahrenheit}F° converted to Celsius is {result:N2}C°";
+      string responseMessage = $"The temperature {fahrenheit.ToString(CultureInfo.InvariantCulture)}°F converted to Celsius is {result.ToString("N2", CultureInfo.InvariantCulture)}°C";
 
       _logger.LogInformation($"Fahrenheit value received:{fahrenheit}");
 
