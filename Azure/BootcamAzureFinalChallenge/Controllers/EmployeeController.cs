@@ -70,7 +70,7 @@ public class EmployeeController : ControllerBase
         employeeFromDb.Department = employee.Department;
         employeeFromDb.Extension = employee.Extension;
         employeeFromDb.ProfessionalEmail = employee.ProfessionalEmail;
-        employeeFromDb.Salary = employeeFromDb.Salary;
+        employeeFromDb.Salary = employee.Salary;
         // TODO: Chamar o método de Update do _context.Funcionarios para salvar no Banco SQL
         _context.Update(employeeFromDb);
         _context.SaveChanges();
@@ -92,6 +92,7 @@ public class EmployeeController : ControllerBase
             return NotFound();
 
         // TODO: Chamar o método de Remove do _context.Funcionarios para salvar no Banco SQL
+        _context.Remove(employeeFromDb);
         _context.SaveChanges();
 
         var tableClient = GetTableClient();
