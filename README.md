@@ -1,5 +1,5 @@
 # .NET Projects💜 :
-My main .NET/ .NET Core Projects using C# / XAML / ASPNET Core / WPF
+### My main .NET/ .NET Core Projects using C# / XAML / ASPNET Core / WPF and some Azure Cloud Projects
 
 ## - [Payment API](https://github.com/lucasgarciadev22/NETProjects/tree/main/PaymentAPI)
 ## - [Task Agenda MVC](https://github.com/lucasgarciadev22/NETProjects/tree/main/TaskAgendaWithEntity)
