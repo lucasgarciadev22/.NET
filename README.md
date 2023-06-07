@@ -8,3 +8,7 @@
 ## - [SOLID](https://github.com/lucasgarciadev22/NETProjects/tree/main/SolidCSharp)
 ## - [WPF CRUD MVVM](https://github.com/lucasgarciadev22/NETProjects/tree/main/ListMVVM)
 
+### Other plugins, extensions and nuget packages I'm creating for the community:
+## - [Nugets](https://github.com/lucasgarciadev22/Nugets)
+## - [VSCode Extensions](https://github.com/lucasgarciadev22/VSCode-Extensions)
+
