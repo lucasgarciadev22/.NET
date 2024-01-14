@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PizzaManager.Models;
+namespace PizzaManagerCosmoDb.Models;
 
 public class Product
 {
-    public string Id { get; set; } = Guid.NewGuid().ToString();
+    public int Id { get; set; }
     public string Name { get; set; } = null!;
 
     [Column(TypeName = "decimal(6,2)")]
